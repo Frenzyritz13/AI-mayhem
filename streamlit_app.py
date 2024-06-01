@@ -1,7 +1,9 @@
 import streamlit as st
+from streamlit_geolocation import streamlit_geolocation
 import requests
 import base64
 
+location = streamlit_geolocation()
 # Function to send concatenated input and location to the API
 def send_concatenated_input_to_api(concatenated_input):
     api_url = "https://a6b3-106-51-78-137.ngrok-free.app/"  # Replace with your API endpoint
