@@ -5,7 +5,7 @@ import base64
 
 # Function to send concatenated input and location to the API
 def send_concatenated_input_to_api(concatenated_input):
-    api_url = "https://67db-106-51-78-137.ngrok-free.app/"  # Replace with your API endpoint
+    api_url = "https://67db-106-51-78-137.ngrok-free.app/ask/"  # Replace with your API endpoint
     headers = {"Content-Type": "application/json"}
     payload = {"data": concatenated_input}
 
@@ -18,7 +18,7 @@ def send_concatenated_input_to_api(concatenated_input):
 
 # Function to send base64-encoded image and location to the API
 def send_base64_image_and_location_to_api(image, location):
-    api_url = "https://67db-106-51-78-137.ngrok-free.app/"  # Replace with your API endpoint
+    api_url = "https://67db-106-51-78-137.ngrok-free.app/ask/"  # Replace with your API endpoint
     image_base64 = base64.b64encode(image).decode('utf-8')
     payload = {
         "image": image_base64,
