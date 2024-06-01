@@ -3,7 +3,6 @@ from streamlit_geolocation import streamlit_geolocation
 import requests
 import base64
 
-location = streamlit_geolocation()
 # Function to send concatenated input and location to the API
 def send_concatenated_input_to_api(concatenated_input):
     api_url = "https://a6b3-106-51-78-137.ngrok-free.app/"  # Replace with your API endpoint
@@ -50,7 +49,8 @@ user_input = st.text_input("Your Input:", placeholder="Type something...")
 
 # Function to get the user's location
 def get_location():
-    location = st.experimental_get_query_params().get('location', [None])[0]
+    location = streamlit_geolocation()
+    # location = st.experimental_get_query_params().get('location', [None])[0]
     if location:
         return location
     else:
